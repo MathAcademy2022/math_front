@@ -1,6 +1,6 @@
 import { fetchNumbers, postAsnwer, fetchValidation } from "../api/Nrs"
 import { useEffect, useState, useRef } from "react";
-
+import "../styles/Home.css";
 
 function Home() {
     const [numbers, setNumbers] = useState([]);
@@ -36,20 +36,22 @@ function Home() {
 
     return (
         <div className="home-container">
-            <h1> Hommmmmme</h1>
+            <h1> Find the sum of the two numbers</h1>
+            <div className="numbers">
 
-            <h1> {firstNr}</h1>
-            <span>
-                +
-            </span>
-            <h1>( {secondNr} )</h1>
-            <span>
-                <input type="number" ref={answerRef}></input>
-            </span>
+                <span>
+                    {firstNr}   +   ( {secondNr} )  =
+                </span>
+
+                <span>
+
+                    <input type="number" ref={answerRef}></input>
+                </span>
+            </div>
             <button onClick={validateAnswer}>Check answer</button>
 
 
-        </div>
+        </div >
     )
 }
 
